@@ -114,7 +114,7 @@ yarn jest
 ## Clients
 Sever side clients used to interact with Access Protocol on the Solana Network
 
-### Solana Client Module
+### Solana Client Module (clients/solana.ts)
 
 #### Purpose
 Provides a client in server-side applications like Nuxt.js, Next.js, expressjs or fastify to check if a user has access via the Access Protocol product.
@@ -127,8 +127,19 @@ Provides a client in server-side applications like Nuxt.js, Next.js, expressjs o
 - A default function that accepts a configuration object and returns an object with:
   - `userHasAccess`: An asynchronous function that takes a `PublicKey` as an owner and returns a boolean indicating whether the user has access based on their stake state.
 
+#### Example
 
-### Authentication Client Module
+```typescript
+    ...
+    // Check amount staked
+    const isValidStake = await solana.userHasAccess(new PublicKey(address))
+    if (!isValidStake) {
+      return new ApiResponse(false, ErrorMessage.InvalidStake)
+    }
+    ...
+```
+
+### Authentication Client Module (clients/auth.ts)
 
 #### Purpose
 Manages JWT-based authentication, including signing, decoding, verifying, and token management for server applications.
