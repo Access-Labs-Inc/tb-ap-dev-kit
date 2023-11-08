@@ -3,8 +3,6 @@
 
 ## Table of Contents
 
-# Table of Contents
-
 - [Overview](#overview)
 - [Requirements](#requirements)
   - [@solana/spl-token](#solanaspl-token)
