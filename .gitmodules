@@ -1,0 +1,6 @@
+[submodule "smartcontract-jsbindings"]
+	path = smartcontract-jsbindings
+	url = git@github.com:TheBlockCrypto/ap.git
+[submodule "examples/nuxt"]
+	path = examples/nuxt
+	url = git@github.com:TheBlockCrypto/bootstrap-ap-nuxt.git
