@@ -14,4 +14,4 @@ if ( ! defined( 'ACCESS_PROTOCOL_DIR' ) ) {
   define( 'ACCESS_PROTOCOL_DIR', dirname( __FILE__ ) );
 }
 
-require_once PUBLISHNOW_DIR . '/src/admin.php';
+require_once ACCESS_PROTOCOL_DIR . '/src/admin.php';
