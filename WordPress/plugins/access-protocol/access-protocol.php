@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Access Protocol
-Plugin URI: http://github.com/TheBlockCrypto/Wordpress
+Plugin URI: https://github.com/Access-Labs-Inc/ap-dev-kit
 Description: Integrates Access Protocol into Wordpress
 Version: 1.0
 Author: Access Protocol Dev Team
