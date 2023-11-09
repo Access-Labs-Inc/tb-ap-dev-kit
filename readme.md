@@ -189,42 +189,40 @@ if (userHasAccessToPost(post, req.user)) {
 
 ### Program Store State (store/program)
 
-// Interface for the Staking Program
+- Interface for the Staking Program
+  - `programId`: PublicKey representing the unique identifier for the staking program
+  - `connection`: Connection object used to communicate with the Solana blockchain
+  - `centralState`: Object that holds the central state of the staking program
+  - `unstakeURL`: String URL to be used for unstaking operations
 
-// `programId`: PublicKey representing the unique identifier for the staking program
-// `connection`: Connection object used to communicate with the Solana blockchain
-// `centralState`: Object that holds the central state of the staking program
-// `unstakeURL`: String URL to be used for unstaking operations
-
-// Default State Function for the Staking Program
-
-// Returns a default `Program` object with initial empty states:
-// `programId`: Initialized to an empty object, should be replaced with an actual PublicKey
-// `connection`: Initialized to an empty object, to be set up with a Solana blockchain connection
-// `centralState`: Initialized to an empty object, intended to hold stateful information of the program
-// `unstakeURL`: Initialized to an empty string, should be assigned the endpoint for the unstake operation.
+- Default State Function for the Staking Program
+  - Returns a default `Program` object with initial empty states:
+    - `programId`: Initialized to an empty object, should be replaced with an actual PublicKey
+    - `connection`: Initialized to an empty object, to be set up with a Solana blockchain connection
+    - `centralState`: Initialized to an empty object, intended to hold stateful information of the program
+    - `unstakeURL`: Initialized to an empty string, should be assigned the endpoint for the unstake operation.
 
 ### Pools Store State (store/pools)
 
-// State Object for the Staking Application
+- State Object for the Staking Application
+  - `poolID`: Unique identifier for the staking pool
+  - `hasAccess`: Boolean flag indicating if the user has access to premium content
+  - `minStake`: Minimum amount of tokens required to stake for access
+  - `userBalance`: The current balance of the user's wallet
+  - `rewards`: The amount of rewards earned from staking
+  - `stakedAmount`: The total amount of tokens the user has staked
+  - `stakeAccount`: Object containing details of the user's staking account
+  - `stakeKey`: Object holding keys pertaining to the user's stake
+  - `stakerAta`: Associated Token Account (ATA) for the staker
+  - `stakerAtaAccount`: Object containing the staker's ATA account details
+  - `data`: Miscellaneous data related to the staking process or user's stake
+  - `associatedWallet`: Boolean indicating if a wallet is associated with the staker
+  - `indicators`: Object used for tracking various UI indicators
+  - `protocolFee`: The fee charged by the protocol for staking services (2% in this case)
+  - `loading`: Boolean flag to indicate if a loading process is ongoing
+  - `loadingAction`: Describes the action being performed during loading
+  - `error`: String detailing any errors that have occurred during staking operations
 
-// `poolID`: Unique identifier for the staking pool
-// `hasAccess`: Boolean flag indicating if the user has access to premium content
-// `minStake`: Minimum amount of tokens required to stake for access
-// `userBalance`: The current balance of the user's wallet
-// `rewards`: The amount of rewards earned from staking
-// `stakedAmount`: The total amount of tokens the user has staked
-// `stakeAccount`: Object containing details of the user's staking account
-// `stakeKey`: Object holding keys pertaining to the user's stake
-// `stakerAta`: Associated Token Account (ATA) for the staker
-// `stakerAtaAccount`: Object containing the staker's ATA account details
-// `data`: Miscellaneous data related to the staking process or user's stake
-// `associatedWallet`: Boolean indicating if a wallet is associated with the staker
-// `indicators`: Object used for tracking various UI indicators
-// `protocolFee`: The fee charged by the protocol for staking services (2% in this case)
-// `loading`: Boolean flag to indicate if a loading process is ongoing
-// `loadingAction`: Describes the action being performed during loading
-// `error`: String detailing any errors that have occurred during staking operations
 
 
 
